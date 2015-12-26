@@ -17,5 +17,12 @@ function Pad(x, y, w, h) {
     } else if (direction === "down") {
         self.y += self.speed;
     }
+
+    if (self.y <= 0) {
+      self.y = 0;
+    }
+    if (self.y >= 600-self.h) {
+      self.y = 600-self.h;
+    }
   }
 }
